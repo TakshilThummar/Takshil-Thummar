@@ -17,7 +17,7 @@ const Education = () => {
           <div className="content">
             <h3>Bachelor of Computer Application</h3>
             <p>Noble University - Junagadh</p>
-            <h4>2022-2025 | 5th Sem Pursuing (8.84 CGPA)</h4>
+            <h4>2022-2025 | 6th Sem Pursuing (8.84 CGPA)</h4>
           </div>
         </div>
 
