@@ -55,7 +55,6 @@ const Home = () => {
 
           <div className="buttons">
             <Link to="/about" className="btn">About Me<i className="fas fa-arrow-circle-right"></i></Link>
-            {/* Use <a> tag for resume download */}
             <a href="/DevOps_Engineer_Takshil.pdf" download="DevOps_Engineer_Takshil.pdf" className="btn">
               Resume
             </a>

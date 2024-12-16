@@ -47,30 +47,6 @@ const Experience = () => {
         <div className="container left">
           <div className="content">
             <div className="tag">
-              <h2>The Spark Foundation</h2>
-            </div>
-            <div className="desc">
-              <h3>Mobile Application Developer | Internship</h3>
-              <p>April 2021 - May 2021</p>
-            </div>
-          </div>
-        </div>
-
-        <div className="container right">
-          <div className="content">
-            <div className="tag">
-              <h2>Frshr Technologies</h2>
-            </div>
-            <div className="desc">
-              <h3>Wordpress Developer | Internship</h3>
-              <p>April 2021 - April 2021</p>
-            </div>
-          </div>
-        </div>
-
-        <div className="container left">
-          <div className="content">
-            <div className="tag">
               <h2>WonderingBlog</h2>
             </div>
             <div className="desc">
