@@ -56,7 +56,7 @@ const About = () => {
 
         <div className="content">
           <h3>I'm Takshil Thummar</h3>
-          <span className="tag"><h2>I am a <span>{text}</span><span className="cursor">|</span></h2></span>
+          <span className="tag"><h2>I'm a <span>{text}</span><span className="cursor">|</span></h2></span>
 
           <p>I am a DevOps Engineer, React developer, Django Developer, Python Developer, Web Designer based in Junagadh, Gujarat - India. I am an Information Technology undergraduate from Noble University. I am very passionate about improving my coding skills & developing web applications & websites. I build WebApps and Websites using React, Django, HTML5, CSS3 or JS. Working for myself to improve my skills. Love to build Full-Stack clones and also deploy on it AWS and Docker. </p>
 
