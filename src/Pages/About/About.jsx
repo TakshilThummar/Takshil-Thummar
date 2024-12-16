@@ -13,10 +13,10 @@ const About = () => {
   const professions = useMemo(() => [
     'DevOps Engineer',
     'React Developer',
-    'Web Designer',
+    'Frontend Developer',
     'Python Developer',
     'Django Developer',
-    'Frontend Developer'
+    'Web Designer',
   ], []);
 
   useEffect(() => {
