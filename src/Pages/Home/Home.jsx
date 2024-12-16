@@ -58,16 +58,14 @@ const Home = () => {
 
           <div className="buttons">
             <Link to="/about" className="btn">About Me<i className="fas fa-arrow-circle-right"></i></Link>
-            <Link to="/about" className="btn">Resume</Link>
+            <Link href="/DevOps_Engineer_Takshil.pdf" download="DevOps_Engineer_Takshil.pdf" className="btn">Resume</Link>
           </div>
 
           <div className="socials">
                 <ul className="social-icons">
-                    <li><a className="linkedin" aria-label="LinkedIn" href="https://www.linkedin.com/in/jigar-sable/" target="_blank"><i className="fab fa-linkedin"></i></a></li>
-                    <li><a className="github" aria-label="GitHub" href="https://github.com/jigar-sable" target="_blank"><i className="fab fa-github"></i></a></li>
-                    <li><a className="twitter" aria-label="Twitter" href="https://twitter.com/jigar_sable" target="_blank"><i className="fab fa-twitter"></i></a></li>
-                    <li><a className="telegram" aria-label="Telegram" href="https://t.me/lifecode5" target="_blank"><i className="fab fa-telegram-plane"></i></a></li>
-                    <li><a className="instagram" aria-label="Instagram" href="https://www.instagram.com/jigarsable.dev"><i className="fab fa-instagram" target="_blank"></i></a></li>
+                    <li><a className="linkedin" aria-label="LinkedIn" href="https://www.linkedin.com/in/takshil-thummar-158a51303" target="_blank"><i className="fab fa-linkedin"></i></a></li>
+                    <li><a className="github" aria-label="GitHub" href="https://github.com/TakshilThummar" target="_blank"><i className="fab fa-github"></i></a></li>
+                    <li><a className="twitter" aria-label="Twitter" href="#" target="_blank"><i className="fab fa-twitter"></i></a></li>
                 </ul>
             </div>
 
