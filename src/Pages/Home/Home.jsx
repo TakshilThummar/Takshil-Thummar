@@ -51,7 +51,7 @@ const Home = () => {
           <h2>I am a <span>{text}</span><span className="cursor">|</span></h2>
 
           <p>My name is Takshil Thummar and I'm from Junagadh.</p>
-          <p>Now, My 5th sem is pursuing in BCA (Bachelor's of Computer application) at Noble University - Junagadh.</p>
+          <p>Now, My 5th sem is pursuing in BCA (Bachelor's of Computer application) at Noble University - Junagadh, Gujarat.</p>
 
           <div className="buttons">
             <Link to="/about" className="btn">About Me<i className="fas fa-arrow-circle-right"></i></Link>
