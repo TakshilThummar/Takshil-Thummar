@@ -27,7 +27,7 @@ phases:
     runtime-versions:
       nodejs: 18
     commands:
-      - echo "Installing NPM dependencies..."
+      - echo "Installing dependencies..."
       - npm install
   build:
     commands:
@@ -35,13 +35,11 @@ phases:
       - npm run build
   post_build:
     commands:
-      - echo "Syncing build folder to S3 bucket: $S3_BUCKET"
-      - aws --version
-      - aws s3 sync build/ s3://$S3_BUCKET/ --delete
-      - echo "S3 sync completed."
+      - echo "Syncing to S3 with --delete..."
+      - aws s3 sync dist/ s3://$S3_BUCKET/ --delete
+      - echo "S3 deployment complete."
 
 artifacts:
-  base-directory: build
+  base-directory: dist
   files:
     - '**/*'
-
