@@ -20,7 +20,7 @@ version: 0.2
 
 env:
   variables:
-    S3_BUCKET: "your-s3-bucket-name" # Replace or set in CodeBuild environment
+    S3_BUCKET: "takshil-bucket-test" # Replace or set in CodeBuild environment
 
 phases:
   install:
