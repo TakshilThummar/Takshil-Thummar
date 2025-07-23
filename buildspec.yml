@@ -20,32 +20,28 @@ version: 0.2
 
 env:
   variables:
-    S3_BUCKET: "your-s3-bucket-name"  # ✅ Set in CodeBuild console if not hardcoding
+    S3_BUCKET: "takshil-bucket-test"
 
 phases:
   install:
     runtime-versions:
       nodejs: 18
-      python: 3.11  # Required for installing AWS CLI v2 dependencies
     commands:
-      - echo "Installing AWS CLI v2 (for sync)..."
-      - curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-      - unzip awscliv2.zip
-      - sudo ./aws/install
-      - echo "Installing project dependencies..."
+      - echo "Installing NPM dependencies..."
       - npm install
   build:
     commands:
-      - echo "Building React project..."
+      - echo "Building React app..."
       - npm run build
   post_build:
     commands:
-      - echo "Deploying to S3 with sync + --delete..."
-      - /usr/local/bin/aws s3 sync dist/ s3://$S3_BUCKET/ --delete
-      - echo "✅ Deployment complete"
+      - echo "Syncing build folder to S3 bucket: $S3_BUCKET"
+      - aws --version
+      - aws s3 sync build/ s3://$S3_BUCKET/ --delete
+      - echo "S3 sync completed."
 
 artifacts:
-  base-directory: dist
+  base-directory: build
   files:
     - '**/*'
 
