@@ -1,47 +1,16 @@
-# version: 0.2
-
-# phases:
-#   install:
-#     runtime-versions:
-#       nodejs: 18
-#     commands:
-#       - npm install
-#   build:
-#     commands:
-#       - npm run build
-
-# artifacts:
-#   base-directory: dist
-#   files:
-#     - '**/*'
-
-
 version: 0.2
-
-env:
-  variables:
-    S3_BUCKET: "takshil-bucket-test"
 
 phases:
   install:
     runtime-versions:
       nodejs: 18
     commands:
-      - echo "Installing NPM dependencies..."
       - npm install
   build:
     commands:
-      - echo "Building React app..."
       - npm run build
-  post_build:
-    commands:
-      - echo "Syncing build output to S3 bucket: $S3_BUCKET"
-      - aws --version
-      - aws s3 sync dist/ s3://$S3_BUCKET/ --delete
-      - echo "Sync completed with --delete"
 
 artifacts:
   base-directory: dist
   files:
     - '**/*'
-
