@@ -36,10 +36,10 @@ phases:
   post_build:
     commands:
       - echo "Syncing build to S3 bucket: $S3_BUCKET"
-      - aws s3 sync dist/ s3://$S3_BUCKET/ --delete
+      - aws s3 sync build/ s3://$S3_BUCKET/ --delete
       - echo "Deployment complete. Orphaned files removed."
 
 artifacts:
   files:
     - '**/*'
-  base-directory: dist
+  base-directory: build
