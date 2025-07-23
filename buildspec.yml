@@ -2,7 +2,7 @@ version: 0.2
 
 env:
   variables:
-    S3_BUCKET: "takshil-bucket-test"
+    S3_BUCKET: takshil-bucket-test
 
 phases:
   install:
@@ -17,10 +17,9 @@ phases:
       - npm run build
   post_build:
     commands:
-      - echo "Syncing build output to S3 bucket: $S3_BUCKET"
-      - aws --version
+      - echo "Syncing dist/ folder to S3 bucket: $S3_BUCKET"
       - aws s3 sync dist/ s3://$S3_BUCKET/ --delete
-      - echo "Sync completed with --delete"
+      - echo "✅ Sync complete."
 
 artifacts:
   base-directory: dist
